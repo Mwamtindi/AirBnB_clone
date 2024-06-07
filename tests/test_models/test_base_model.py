@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for models/base_model.py.
+"""Defines unittests for base_model.py in models.
 Unittest classes:
 TestBaseModel_instantiation
 TestBaseModel_save
@@ -13,7 +13,7 @@ from time import sleep
 from models.base_model import BaseModel
 
 class TestBaseModel_instantiation(unittest.TestCase):
-"""Unittests for testing instantiation of the BaseModel class."""
+"""Unittests to test instantiation of  BaseModel."""
 
 def test_no_args_instantiates(self):
     self.assertEqual(BaseModel, type(BaseModel()))
@@ -84,7 +84,7 @@ def test_instantiation_with_args_and_kwargs(self):
     self.assertEqual(base_model.updated_at, date_time)
 
 class TestBaseModel_save(unittest.TestCase):
-"""Unittests for testing save method of the BaseModel class."""
+"""Unittests for testing the save method of BaseModel."""
 
 @classmethod
 def setUp(self):
@@ -135,7 +135,7 @@ def test_save_updates_file(self):
         self.assertIn(base_model_id, f.read())
 
 class TestBaseModel_to_dict(unittest.TestCase):
-"""Unittests for testing to_dict method of the BaseModel class."""
+"""Unittests for testing method of BaseModel class."""
 
 def test_to_dict_type(self):
     base_model = BaseModel()
